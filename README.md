@@ -10,7 +10,7 @@ Optical flow cytometry is used as the gold standard in single cell function diag
 
 ## Implementaion Notes
 This code is written in _Python_ and _Matlab_. It uses the deep learning library _PyTorch_.
-The code was tested with _Python_ version 3.7, _PyTorch_ version 1.5.1.
+The code was tested with _Python_ version 3.7, _PyTorch_ version 1.5.1, Matlab version 2019b, on a _Ubuntu_ 18.04.5 system.
 
 ## License
 This code is licensed under 3-clause BSD License:
