@@ -8,7 +8,7 @@ function [allMse, allCrl, beads, y_lvl_arr, allSup, err, allPrm] = ...
 % n_gridpts:        number of elements in the grid for the sensing matrix
 % smat:             version of sensing matrix to use
 % algo:             algorithm to use for CS ('NOMP' or 'AdOMP')
-% flagEval:         bool to specify whether evaluation data are available or not
+% flagEval:         flag to specify whether evaluation data are available or not
 % data_eval:        cell array which contains all true separated signals
 % method:           string which AdOMP optimisation technique to use (use 'single_lm')
 % flagPlot:         flag to plot comparison of reconstruction
@@ -33,7 +33,7 @@ G_max = n_features - Nf;
 G = floor(linspace(0, G_max, n_gridpts));
 
 % create sensing matrix
-Phi = createSensingMatrix(G, n_features, n_gridpts, f, [], [], smat);
+Phi = createSensingMatrix(G, n_features, n_gridpts, f, smat);
 
 % assign output arrays
 maxAmount = max(labels);
@@ -69,7 +69,7 @@ for cnt = 1:n_data
     end
     
     % evaluate
-    if flagEval == 1
+    if flagEval
         
         % true separated signals are available
         y_true = data_eval{cnt};
@@ -79,7 +79,7 @@ for cnt = 1:n_data
         [y_rec, allMse(cnt,:), allCrl(cnt,:), beads(cnt,:), prm_rec] = ...
             evalCS(rN, y_true, y_rec, sup, trueAmount, maxAmount, prm_rec);
         
-    elseif flagEval == 2
+    else
         
         % only extract parameters of reconstructed signals
         [prm_rec.magD, prm_rec.normInt] = extract_params_rec(y_rec, prm_rec);

@@ -1,14 +1,14 @@
-% %% load simulated data
+%% load simulated data
 % data = struct;
 % path = '../python/data/';
-% filename = 'sim_data_cs_4um8um_shift-50.mat';
+% filename = 'sim_data_file.mat';  % to be created first
 % load(strcat(path, filename),'data_final','data_sep_final','param_final');
 % data_raw = data_final';
 % labels = repelem(1:4, size(data_raw,2)/4);
 % % labels = ones(1, size(data_raw,2));
 % data.n_features = length(data_sep_final{1});
 % opt.data_type = 'sim';
-% opt.ds = 1;
+opt.ds = 1;
 % 
 % % select desired template
 % variableRange = [14,20,26,32,38];
