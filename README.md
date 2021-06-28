@@ -10,7 +10,7 @@ Optical flow cytometry is used as the gold standard in single cell function diag
 ## File Organization
 Our experimental data can be found in `python/data/exp_data_4um8um.mat`, together with the extracted cell parameters from this data. A few model checkpoints, including our best performing FCN-2 from the results section, are located at `python/models/`. Simulated training data for a FCN may be generated with the file `createDataset.m` in the `matlab` directory. Note that the `results` folders in both subdirectories must be created first for proper functionality.
 
-## Implementaion Notes
+## Implementation Notes
 This code is written in _Python_ and _Matlab_. It uses the deep learning library _PyTorch_.
 The code was tested with _Python_ version 3.7, _PyTorch_ version 1.5.1, _Matlab_ version 2019b, on a _Ubuntu_ 18.04.5 system.
 
