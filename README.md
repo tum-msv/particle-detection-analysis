@@ -1,6 +1,6 @@
 # Joint Particle Detection and Analysis by a CNN and Adaptive Norm Minimization Approach
 
-This is the simulation code to the article
+This is the simulation code for the article
 
 M. Baur, M. Reisbeck, O. Hayden, and W. Utschick, "Joint Particle Detection and Analysis by a CNN and Adaptive Norm Minimization Approach," _IEEE Transactions on Biomedical Engineering_, vol. 69, no. 8, pp. 2468-2479, Aug. 2022, doi: 10.1109/TBME.2022.3147701.
 
